@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 12px;
+    font-family: Menlo, Consolas, "DejaVu Sans Mono", Monaco, monospace;
+    background-color: black;
+    color: #ffc227;
+    font-weight: bolder;
+}
+
+a {
+    color: #ff6201;
+}
+a:hover {
+    font-size: larger;
+    color: #ff3c01;
+}
+
+.bg {
+    position: fixed;
+    display: flex;
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+}
+
+.fig {
+    white-space: pre-wrap;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-width: 800px;
+    padding-top: 32px;
+}
+
+.txt {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 5%;
+}
+
+audio {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+}
+
+.donut {
+    position: fixed;
+    bottom: 1rem;
+    width: 100%;
+    font-size: 10px;
+    color: #ff6201;
+    animation: .2s infinite alternate slide-in;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-20%);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .fig {
+        font-size: 6px;
+        min-width: 80px;
+
+    }
+    .txt {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 80%;
+    left: 25%;
+    gap: 4px;
+}
+}
